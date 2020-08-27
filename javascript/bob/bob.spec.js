@@ -1,23 +1,27 @@
-import { hey } from './bob';
+import Teen from './bob';
 
 describe('Bob', () => {
   test('stating something', () => {
-    const result = hey('Tom-ay-to, tom-aaaah-to.');
+    const tarquin = new Teen
+    const result = tarquin.hey('Tom-ay-to, tom-aaaah-to.');
     expect(result).toEqual('Whatever.');
   });
 
-  xtest('shouting', () => {
-    const result = hey('WATCH OUT!');
+  test('shouting', () => {
+    const mekala = new Teen
+    const result = mekala.hey('WATCH OUT!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('shouting gibberish', () => {
-    const result = hey('FCECDFCAAB');
+  test('shouting gibberish', () => {
+    const bryce = new Teen
+    const result = bryce.hey('FCECDFCAAB');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xtest('asking a question', () => {
-    const result = hey('Does this cryogenic chamber make me look fat?');
+  test('asking a question', () => {
+    const jadaiden = new Teen
+    const result = jadaiden.hey('Does this cryogenic chamber make me look fat?');
     expect(result).toEqual('Sure.');
   });
 
