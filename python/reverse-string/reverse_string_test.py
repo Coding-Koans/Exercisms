@@ -1,28 +1,43 @@
 import unittest
-
 from reverse_string import reverse
-
-# Tests adapted from `problem-specifications//canonical-data.json` @ v1.2.0
 
 
 class ReverseStringTest(unittest.TestCase):
     def test_an_empty_string(self):
-        self.assertEqual(reverse(""), "")
+        given = ""
+        actual = reverse(given)
+        expected = ""
+        self.assertEqual(actual, expected)
 
     def test_a_word(self):
-        self.assertEqual(reverse("robot"), "tobor")
+        given = "robot"
+        actual = reverse(given)
+        expected = "tobor"
+        self.assertEqual(actual, expected)
 
     def test_a_capitalized_word(self):
-        self.assertEqual(reverse("Ramen"), "nemaR")
+        given = "Ramen"
+        actual = reverse(given)
+        expected = "nemaR"
+        self.assertEqual(actual, expected)
 
     def test_a_sentence_with_punctuation(self):
-        self.assertEqual(reverse("I'm hungry!"), "!yrgnuh m'I")
+        given = "I'm hungry!"
+        actual = reverse(given)
+        expected = "!yrgnuh m'I"
+        self.assertEqual(actual, expected)
 
     def test_a_palindrome(self):
-        self.assertEqual(reverse("racecar"), "racecar")
+        given = "racecar"
+        actual = reverse(given)
+        expected = "racecar"
+        self.assertEqual(actual, expected)
 
     def test_an_even_sized_word(self):
-        self.assertEqual(reverse("drawer"), "reward")
+        given = "drawer"
+        actual = reverse(given)
+        expected = "reward"
+        self.assertEqual(actual, expected)
 
 
 if __name__ == "__main__":
